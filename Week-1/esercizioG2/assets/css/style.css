@@ -41,9 +41,29 @@ body {
     text-decoration: none;
 }
 
-section {
+section, footer {
     border: solid 1px black;
+    border-radius: 30px;
     padding: 40px;
+}
+
+section {
+    border-bottom: none;
+    border-top: none;
+}
+
+section h2, section h3 {
+    font-size: 200%;
+}
+
+.videodiv {
+    background-image: linear-gradient(rgba(0,0,0,0) 25%,rgba(255, 0, 157, 0.2) 50%,rgba(0, 0, 0, 0)100%);
+    border-radius: 30px;
+}
+
+.videoyt {
+    display: block;
+    margin: auto;
 }
 
 
