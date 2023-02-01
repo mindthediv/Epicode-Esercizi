@@ -44,6 +44,8 @@ html, body {
 .intro video {
     width: 100%;
     border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.26); 
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.26);
 }
 
 .intro figcaption {
@@ -86,5 +88,4 @@ footer {
     padding: 10px 0;
 }
 
-/* aggiungo i dettagli (video shadow, video width, primi numeri liste ingredienti) */
 
