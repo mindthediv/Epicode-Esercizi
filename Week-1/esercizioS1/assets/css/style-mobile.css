@@ -1,0 +1,167 @@
+
+/* generali */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #393d41 ;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif; 
+    line-height: 1.65rem ;
+    text-align: center;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #25a2c3 ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.65rem ;
+    margin: 0;
+}
+
+/* header */
+
+header {
+    background-color: black;
+    height: 120px;
+}
+
+header img {
+    padding-top: 26px;
+}
+
+/* main - article  */
+
+article > section {
+    padding: 30px;
+}
+
+#callAction {
+    background-image: url(/assets/img/banner.jpg);
+    background-position: center ;
+    background-size: cover;
+}
+
+#callAction h1 {
+    font-size: 1.5em;
+}
+
+#callAction a {
+    text-decoration: none;
+}
+
+#goBtn {
+    width: 40% ;
+    margin: auto;
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#slogan img {
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+#trustUs {
+    background-color: #e22d0e ;
+    color: white;
+    padding: 36px auto 24px auto;
+}
+
+#trustUs h2 {
+    color: white;
+}
+
+#trustUs span {
+    display: block;
+}
+
+#trustUs > * {
+    margin-bottom: 24px;
+}
+
+/* main - card section */
+
+#cardSec .card {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #dee1e3;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.imgWrap {
+    width: 100%;
+}
+
+#cardSec img {
+    width: 100%;
+}
+
+.textWrap {
+    padding: 10px;
+}
+
+/* footer */
+
+footer {
+    background-color: #25a2c3 ;
+    color: #c8e7f0;
+    padding: 24px;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer a {
+    color: #c8e7f0;
+}
+
+footer div {
+    border: 1px solid #c8e7f0 ;
+    width: 60%;
+    margin: auto;
+}
+
+address, footer h2, footer div {
+    margin-bottom: 20px;
+}
+
+address span , address a {
+    display: block;
+}
+
+address a:first-child::before {
+    font-family: 'Font Awesome 5 Free';
+    content: ' \f87b'  ;
+    display: inline-block;
+    font-weight: 900;
+}
+
+address a:last-of-type::before {
+    font-family: 'Font Awesome 5 Free';
+    content: ' \f674'  ;
+    display: inline-block;
+    font-weight: 900;
+}
+
+address span::before {
+    font-family: 'Font Awesome 5 Free';
+    content: ' \f061'  ;
+    display: inline-block;
+    font-weight: 900;
+}
+
+
+
+
+
+
