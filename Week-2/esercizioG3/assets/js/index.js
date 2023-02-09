@@ -69,12 +69,13 @@
 { 
     let cartPrices = [10,24,16,8];
     let totalShoppingCart = (cartPrices[0] + cartPrices[1] + cartPrices[2] + cartPrices[3]);
+    let shipFee = 10;
 
     if (totalShoppingCart > 50) {
         document.getElementById('ex5').innerHTML = `Il totale del carrello è di ${totalShoppingCart}$. Hai diritto alla spedizione gratuita!`; 
     }
         else {
-            document.getElementById('ex5').innerHTML = `Il totale del carrello è di ${totalShoppingCart}. Verranno addizionati 10$ per i costi di spedizione. `;
+            document.getElementById('ex5').innerHTML = `Il totale del carrello è di ${totalShoppingCart}$. Verranno addizionati ${shipFee}$ per i costi di spedizione.  Costo Complessivo =  ${totalShoppingCart + shipFee}$`;
         }
 }
 /* ESERCIZIO 6
@@ -84,12 +85,13 @@
 { 
     let cartPrices = [10,24,16,8];
     let totalShoppingCart = (((cartPrices[0] / 100) * 80) + ((cartPrices[1] / 100) * 80) + ((cartPrices[2] / 100) * 80) + ((cartPrices[3] / 100) * 80) );
+    let shipFee = 10;
 
     if (totalShoppingCart > 50) {
         document.getElementById('ex6').innerHTML = `Il totale del carrello è di ${totalShoppingCart}$. Hai diritto alla spedizione gratuita!`; 
     }
         else {
-            document.getElementById('ex6').innerHTML = `Il totale del carrello è di ${totalShoppingCart}. Verranno addizionati 10$ per i costi di spedizione. `;
+            document.getElementById('ex6').innerHTML = `Il totale del carrello è di ${totalShoppingCart}$. Verranno addizionati ${shipFee}$  per i costi di spedizione. Costo Complessivo =  ${totalShoppingCart + shipFee}$`;
         }
 }
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -102,21 +104,22 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 {
-    let nEx1 = 1;
-    let nEx2 = 10;
-    let nEx3 = 100;
-    if (nEx1 >= nEx2 && nEx2 >= nEx3) {
-        document.getElementById('ex7').innerHTML = `${nEx1}, ${nEx2}, ${nEx3}`; 
+    let x = 1;
+    let y = 10;
+    let z = 100;
+    if (x > y && x > z) {
+      if (y > z) {document.getElementById('ex7').innerHTML = `${x}, ${y}, ${z}`;}
+            else {document.getElementById('ex7').innerHTML = `${x}, ${y}, ${z}`;}
     }
-        else if (nEx2 >= nEx1 && nEx1 >= nEx3) {
-            document.getElementById('ex7').innerHTML = `${nEx2}, ${nEx1}, ${nEx3}`; 
-        }
-            else if (nEx3 >= nEx2 && nEx2 >= nEx1) {
-                document.getElementById('ex7').innerHTML = `${nEx3}, ${nEx2}, ${nEx1}`;
-            }
-                else {
-                    document.getElementById('ex7').innerHTML = `${nEx2}, ${nEx3}, ${nEx1}`;
-                }
+    else if (y > x && y > z) {
+      if (x > z) {document.getElementById('ex7').innerHTML = `${y}, ${x}, ${z}`;}
+            else {document.getElementById('ex7').innerHTML = `${y}, ${z}, ${x}`;}
+    }
+    else {
+      if (x > y) {document.getElementById('ex7').innerHTML = `${z}, ${x}, ${y}`;}
+            else {document.getElementById('ex7').innerHTML = `${z}, ${y}, ${x}`;}
+    }
+        
 }
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -206,7 +209,7 @@ document.getElementById('ex13').innerHTML = `${me.name}, ${me.lastName}, ${me.sk
 /* SCRIVI QUI LA TUA RISPOSTA */
 {
   let array = [];
-  array.splice(0,10,1,2,3,4,5,6,7,8,9,10);
+  array.splice(0,0,1,2,3,4,5,6,7,8,9,10);
   document.getElementById('ex14').innerHTML = `${array}`;
 
 
