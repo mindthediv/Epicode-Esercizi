@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    background-image: linear-gradient(rgb(230, 230, 230), rgb(199, 199, 199));
+}
+
+#boxCalcolatrice {
+    width: 400px;
+    height: 600px;
+    margin: 60px auto;
+    background-image: linear-gradient(rgb(26, 26, 26),rgb(78, 78, 78));
+    border-bottom: 12px solid;
+    border-right: 12px solid;
+    border-radius: 18px;
+    box-shadow: 12px 12px 16px 4px rgb(100, 100, 100);
+}
+
+.row {
+    width: 100%;
+    height: 99px;
+}
+
+.btn {
+    width: 96px;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient( rgb(100, 100, 100), rgb(61, 61, 61));
+    border: 1px solid black;
+    font-size: 3em;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient( rgb(126, 126, 126), rgb(112, 112, 112))
+}
+
+#btnEq {
+    width: 98%;
+}
+
+#screenArea {
+    width: 100%;
+    height: 100%;
+}
+
+#screen {
+    width: 96%;
+    height: 96%;
+    line-height: 3em;
+    font-size: 3em;
+}
+
+#screen, #screenArea {
+    background-color: black;
+    color: #71bdff ;
+    text-align: right;
+    margin: auto;
+}
+
+.btn, #screen, #screenArea {
+    border-radius: 16px;
+}
