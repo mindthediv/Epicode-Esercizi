@@ -270,8 +270,7 @@ console.log(moviesTitle());
 /* ESERCIZIO 15
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
-var movies2k = () => movies.filter(movie => movie = (movies.Years.charAt(0) == 2));
-console.log(movies2k());
+
 /* ESERCIZIO 16 (html)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
