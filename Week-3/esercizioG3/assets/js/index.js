@@ -1,28 +1,51 @@
-const btnAdd = document.getElementById("aggiungi");
-const taskList = document.getElementById("lista");
-const btnClear = document.getElementById("cancella");
+const addTaskButton = document.getElementById("addTask");
+const taskList = document.getElementById("taskList");
 
-btnAdd.addEventListener("click", function (event) {
-    const newTask = document.getElementById("taskInput");
+var createDeleteButton = (taskItem) => {
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("Button");
+    deleteButton.textContent = "Elimina";
+    taskItem.appendChild(deleteButton);
+    return deleteButton;
+}
+
+var createLabelItem = (taskItem) => {
+    let labelItem = document.createElement("label");
+    labelItem.textContent = newTask.value;
+    labelItem.classList.add("custom-label");
+    labelItem.addEventListener("click", function (event) {
+        if (labelItem.style.textDecoration === "line-through") {
+            labelItem.style.textDecoration = 'none';
+        }
+        else {
+            labelItem.style.textDecoration = "line-through";
+        }
+    });
+    taskItem.appendChild(labelItem);
+}
+
+var createTaskItem = () => {
+    let taskItem = document.createElement("li");
+    taskItem.classList.add("custom-li");
+    taskList.appendChild(taskItem);
+    return taskItem;
+}
+
+addTaskButton.addEventListener("click", function (event) {
+    const newTask = document.getElementById("newTask");
     if (!newTask.value) {
         alert("Inserisci un nome per il task");
         return;
-    } else {
-        const taskItem = document.createElement("li");
-        taskItem.textContent = newTask.value;
-        taskItem.setAttribute('onclick', "style.text-decoration = 'line-through'")
-        taskList.appendChild(taskItem);
-
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Elimina";
-        taskItem.appendChild(deleteButton);
-
-        deleteButton.addEventListener("click", function () {
-            taskList.removeChild(taskItem);
-        
-        });
     }
+
+    const taskItem = createTaskItem();
+
+    createLabelItem(taskItem)
+
+    const deleteButton = createDeleteButton(taskItem);
+
+    deleteButton.addEventListener("click", function () {
+        taskList.removeChild(taskItem);
+    });
     newTask.value = '';
 });
-
-btnClear.addEventListener('click', () => taskList.innerHTML = '');

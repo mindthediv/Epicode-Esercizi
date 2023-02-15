@@ -1,4 +1,21 @@
-li:hover {
-    cursor: pointer;
+html,
+html,
+body {
+    margin: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
+#wrap-newTask {
+    text-align: center;
+}
+
+#taskList {
+    list-style-type: none;
+}
+
+.deleteButton {
+    text-align: right;
+}
