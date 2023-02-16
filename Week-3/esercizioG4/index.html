@@ -131,6 +131,7 @@
       */
       var heading1 = document.querySelector('h1');
       const makeItClickable = function () {
+        heading1.setAttribute('style', ' cursor : pointer;');
         heading1.setAttribute('onclick', 'cambiaColore()');
       }
       function cambiaColore() {
