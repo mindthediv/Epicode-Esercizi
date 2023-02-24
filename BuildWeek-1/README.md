@@ -17,11 +17,11 @@ Le pagine che dovrete creare sono:
 
 ![Welcome Page](/BuildWeek-1/assets/doc/welcome.png "Welcome Page")
 
-![Welcome Page](/BuildWeek-1/assets/doc/benchmark.png "Welcome Page")
+!["Benchmark Page"](/BuildWeek-1/assets/doc/benchmark.png "Benchmark Page")
 
-![Welcome Page](/BuildWeek-1/assets/doc/results.png "Welcome Page")
+!["Results Page"](/BuildWeek-1/assets/doc/results.png "Results Page")
 
-![Welcome Page](/BuildWeek-1/assets/doc/feedback.png "Welcome Page")
+!["Feedback Page"](/BuildWeek-1/assets/doc/feedback.png "Feedback Page")
 
 ## Tips
 
