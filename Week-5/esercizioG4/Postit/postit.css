@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(83, 83, 83);
+}
+.container {
+    margin: 4em auto;
+    width: 70%;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9em;
+}
+.postit {
+    width: 10em;
+    height: 8em;
+    font-family: 'Indie Flower', sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.445);
+}
+.postit span:first-of-type {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.post-A {
+    background-image: linear-gradient(rgb(255, 255, 158) 70%, rgb(177, 177, 112) 100%);
+    transform: rotate(-6deg);
+}
+.post-B {
+    background-image: linear-gradient(rgb(193, 252, 206) 70%, rgb(112, 177, 117) 100%);
+    transform: rotate(7deg);
+}
+.post-C {
+    transform: rotate(-8deg);
+    background-image: linear-gradient(rgb(186, 221, 255) 70%, rgb(112, 148, 177) 100%);
+}
+.post-A:hover , .post-B:hover , .post-C:hover {
+    transform: rotate(0deg) scale(1.2);
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.445);;
+}
