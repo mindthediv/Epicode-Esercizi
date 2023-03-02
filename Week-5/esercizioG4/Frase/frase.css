@@ -29,30 +29,67 @@ i {
     width: max-content;
 }
 #text-1 {
-    opacity: 1;
-    animation: textAnimation 3s forwards;
+    opacity: 0;
+    animation: textA1 9s infinite;
 }
 #text-2 {
     opacity: 0;
-    animation: textAnimation 3s ;
-    animation-delay: 3s; 
+    animation: textA2 9s infinite;
 }
 #text-3 {
     opacity: 0;
-    animation: textAnimation 3s  ;
-    animation-delay: 6s; 
+    animation: textA3 9s infinite;
 }
-
-@keyframes textAnimation {
+@keyframes textA1 {
     0% {
         opacity: 0;
         transform: translateY(-5px);
     }
-    50% {
+    16.5% {
         opacity: 1;
         transform: translateY(0);
     }
-    100% {
+    33% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes textA2 {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    44.5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    66% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes textA3 {
+    0% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    82.5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
         opacity: 0;
         transform: translateY(5px);
     }
