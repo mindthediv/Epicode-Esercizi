@@ -12,12 +12,7 @@ html, body {
     color: #191919;
     font-family: 'Roboto', sans-serif;
 }
-h1 {
-    font-family: 'Spectral', serif;
-    margin: 0;
-    font-size: 7em;
-    font-weight: 400;
-}
+
 ul {
     list-style-type: none;
 }
@@ -25,14 +20,13 @@ a {
     text-decoration: none;
 }
 .btnize {
-    background-color: #191919;
+    background-color: var(--btn_color);
     border-radius: 2em;
     color: white;
-    padding: 0.8em 1em;
+    padding: 0.8em 1.6em;
     border: none;
-}
-#btnChange {
-    background-color: --btn_color;
+    transition: background-color 1s;
+    height: 38px;
 }
 .cardHead {
     height: 20%;
@@ -43,26 +37,33 @@ a {
     align-items: center;
 }
 .cardHead .topic_icon {
-    width: 10%;
-    height: 100%;
+    width: 22px;
+    height: 22px;
     background-image: url(/assets/imgs/image02.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    margin: 0;
+    background-size: cover;
+    background-position: center;
+    margin: 0 1em 0 0 ;
     padding: 0;
+
 }
 .cardHead span {
     width: 90%;
 }
-
+/* container */
+.container, .masterContainer {
+    width: 89%;
+    margin: 0 auto;
+}
 /* header */
 
 header {
-    height: 7vh;
+    height: 75px;
     position: sticky;
     top: 0;
     z-index: 2;
+    background-color: var(--bg_color);
+    border-bottom: 1px solid #191919;
+    transition: background-color 1s;
 }
 #header_container {
     display: flex;
@@ -71,60 +72,87 @@ header {
     height: 100%;
     padding: none;
 }
-header {
-    background-color: var(--bg_color);
-    border-bottom: 1px solid #191919;
-    transition: background-color 1s;
+header img {
+    height: 25px;
 }
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
 }
 nav ul li {
-    padding: 0 1em;
+
+    font-size: 0.9em;
 }
 nav ul li a {
     color: #191919;
+    height: 20px;
+    margin: 0 0.6em 0 1em;
 }
 
 /* aero section */
-.aero_bg {
+section.aero {
+    height: 455px;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
-}
-#svg_mArt {
     position: relative;
-    right: 0;
-}
-section.aero {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
 }
+
 .aeroContent {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    margin-bottom: 2em;
+    height: 100%;
+    padding: 4em 0 0 ;
+    
 }
 .aeroContent button {
     width: fit-content;
-    padding: 0.7em 4em;
+    padding: 0.6em 2.6em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.aero h1 {
+    font-family: 'Spectral', serif;
+    font-size: 7em;
+    font-weight: 500;
+    letter-spacing: -8px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px 2px ;
+}
+.aeroContent h2 {
+    font-weight: 400;
+    line-height: 1em;
+    position: relative;
+    top: -24px;
+}
+#svg_mArt {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 /* trending section */
 
-.container, .masterContainer {
-    width: 70%;
-    margin: 0 auto;
-}
 section.trending {
     display: flex;
     flex-flow: row wrap;
+    padding-top: 2em ;
 }
-section.trending h4 {
+
+.trendHead {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
     width: 100%;
+}
+
+section.trending h4 {
+    height: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+section.trending img {
+    margin-right:0.6em ;
 }
 section.trending .trend_box {
     width: 33%;
@@ -133,11 +161,12 @@ section.trending .trend_box {
 }
 .trend_box {
     margin-bottom: 1.5em;
+    align-items: flex-start;
 }
 .trend_box .trend_index {
     width: 10%;
-    color: rgb(206, 206, 206);
-    font-size: 1.7em;
+    color: rgb(231, 231, 231);
+    font-size: 1.8em;
     font-weight: 900;
     margin-right: 0.6em;
 }
@@ -150,6 +179,9 @@ section.trending .trend_box {
     margin: 0.6em 0 ;
 }
 .trend_box .whoWhere {
+    font-size: 0.8em;
+}
+.trend_content span:last-child {
     font-size: 0.8em;
 }
 /* articles */
