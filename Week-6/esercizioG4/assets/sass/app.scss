@@ -6,6 +6,10 @@
 @import "./partials/mixins.scss";
 @import "./partials/animations.scss";
 
+header {
+  @include floating;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -39,12 +43,14 @@
   align-items: center;
   margin: 0 auto 2rem;
   background-color: $bgHero;
-  //   background-image: url("https://picsum.photos/1900");
-  //   background-position: center;
-
+  // background-image: url("https://picsum.photos/1900");
+  // background-position: center;
   .hero-el {
-    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
     width: 30%;
+    height: 50%;
     backdrop-filter: blur(12px);
     background-image: linear-gradient(
       60deg,
@@ -54,6 +60,7 @@
       rgb(0, 0, 0, 0.4) 60% 100%
     );
     color: white;
+    @include floating;
     img {
       width: 100%;
       margin: 0 auto;
@@ -67,16 +74,10 @@
 }
 
 .grid {
-  display: flex;
-  flex-flow: column nowrap;
-  .row {
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto 2rem;
-    img {
-      @include floating();
-    }
+  width: 80%;
+  margin: 0 auto;
+  @include grid(4);
+  img {
+    @include floating();
   }
 }

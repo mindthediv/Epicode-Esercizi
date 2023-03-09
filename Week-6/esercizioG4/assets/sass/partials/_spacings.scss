@@ -55,38 +55,38 @@ $xxl: 3rem;
   @include m-x-space($xxl);
 }
 .p-y-sm {
-  @include m-y-space($sm);
+  @include p-y-space($sm);
 }
 .p-y-nm {
-  @include m-y-space($nm);
+  @include p-y-space($nm);
 }
 .p-y-md {
-  @include m-y-space($md);
+  @include p-y-space($md);
 }
 .p-y-lg {
-  @include m-y-space($lg);
+  @include p-y-space($lg);
 }
 .p-y-xl {
-  @include m-y-space($xl);
+  @include p-y-space($xl);
 }
 .p-y-xxl {
-  @include m-y-space($xxl);
+  @include p-y-space($xxl);
 }
 .p-x-sm {
-  @include m-x-space($sm);
+  @include p-x-space($sm);
 }
 .p-x-nm {
-  @include m-x-space($nm);
+  @include p-x-space($nm);
 }
 .p-x-md {
-  @include m-x-space($md);
+  @include p-x-space($md);
 }
 .p-x-lg {
-  @include m-x-space($lg);
+  @include p-x-space($lg);
 }
 .p-x-xl {
-  @include m-x-space($xl);
+  @include p-x-space($xl);
 }
 .p-x-xxl {
-  @include m-x-space($xxl);
+  @include p-x-space($xxl);
 }

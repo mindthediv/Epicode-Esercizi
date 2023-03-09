@@ -5,3 +5,18 @@
   box-shadow: $shadow;
   border: $border;
 }
+
+@mixin grid($n) {
+  display: flex;
+  justify-content: space-between;
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+
+    & > * {
+      width: calc(100% / $n);
+    }
+  }
+}
