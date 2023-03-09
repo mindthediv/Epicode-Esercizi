@@ -1,0 +1,92 @@
+$sm: 0.5rem;
+$nm: 1rem;
+$md: 1.5rem;
+$lg: 2rem;
+$xl: 2.5rem;
+$xxl: 3rem;
+
+@mixin p-y-space($name) {
+  padding: $name 0;
+}
+@mixin m-y-space($name) {
+  margin: $name 0;
+}
+@mixin p-x-space($name) {
+  padding: 0 $name;
+}
+@mixin m-x-space($name) {
+  margin: 0 $name;
+}
+
+.m-y-sm {
+  @include m-y-space($sm);
+}
+.m-y-nm {
+  @include m-y-space($nm);
+}
+.m-y-md {
+  @include m-y-space($md);
+}
+.m-y-lg {
+  @include m-y-space($lg);
+}
+.m-y-xl {
+  @include m-y-space($xl);
+}
+.m-y-xxl {
+  @include m-y-space($xxl);
+}
+.m-x-sm {
+  @include m-x-space($sm);
+}
+.m-x-nm {
+  @include m-x-space($nm);
+}
+.m-x-md {
+  @include m-x-space($md);
+}
+.m-x-lg {
+  @include m-x-space($lg);
+}
+.m-x-xl {
+  @include m-x-space($xl);
+}
+.m-x-xxl {
+  @include m-x-space($xxl);
+}
+.p-y-sm {
+  @include m-y-space($sm);
+}
+.p-y-nm {
+  @include m-y-space($nm);
+}
+.p-y-md {
+  @include m-y-space($md);
+}
+.p-y-lg {
+  @include m-y-space($lg);
+}
+.p-y-xl {
+  @include m-y-space($xl);
+}
+.p-y-xxl {
+  @include m-y-space($xxl);
+}
+.p-x-sm {
+  @include m-x-space($sm);
+}
+.p-x-nm {
+  @include m-x-space($nm);
+}
+.p-x-md {
+  @include m-x-space($md);
+}
+.p-x-lg {
+  @include m-x-space($lg);
+}
+.p-x-xl {
+  @include m-x-space($xl);
+}
+.p-x-xxl {
+  @include m-x-space($xxl);
+}

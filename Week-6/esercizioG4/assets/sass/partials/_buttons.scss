@@ -1,0 +1,20 @@
+.btn {
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: $light;
+  border: none;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $primary;
+}
+.btn-secondary {
+  @extend .btn;
+  background-color: $secondary;
+}
+.btn-ok {
+  @extend .btn;
+  background-color: $ok;
+}
