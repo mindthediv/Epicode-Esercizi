@@ -1,0 +1,9 @@
+@mixin bg($bg) {
+  background-color: $bg;
+}
+
+@each $name, $col in $myColors {
+  .bg-#{$name} {
+    @include bg($col);
+  }
+}
