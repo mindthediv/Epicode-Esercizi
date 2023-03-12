@@ -1,14 +1,10 @@
-export { row1, row2, row3, n_cover, pushCover, pushCover6x3 };
+export { pushCover, pushCoverx6, pushCover18x3 };
 
-const row1 = document.getElementById("row1");
-const row2 = document.getElementById("row2");
-const row3 = document.getElementById("row3");
-let n_cover = 1;
-
+let n_cover = 0;
 let pushCover = (el) => {
   // col
   let movCover = document.createElement("div");
-  movCover.setAttribute("class", "col-6 col-md-4 col-xl-2");
+  movCover.setAttribute("class", "col-12 col-md-4 col-xl-2 p-1");
   movCover.setAttribute("id", `cover-${n_cover}`);
 
   //   :hover
@@ -38,14 +34,20 @@ let pushCover = (el) => {
   n_cover += 1;
 };
 
-let pushCover6x3 = () => {
+let pushCoverx6 = (el) => {
   for (let i = 0; i < 6; i++) {
-    pushCover(row1);
+    pushCover(el);
   }
-  for (let i = 0; i < 6; i++) {
-    pushCover(row2);
+};
+
+let pushCover18x3 = (el1, el2, el3) => {
+  for (let i = 0; i < 18; i++) {
+    pushCover(el1);
   }
-  for (let i = 0; i < 6; i++) {
-    pushCover(row3);
+  for (let i = 0; i < 18; i++) {
+    pushCover(el2);
+  }
+  for (let i = 0; i < 18; i++) {
+    pushCover(el3);
   }
 };
