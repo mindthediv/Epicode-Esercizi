@@ -11,17 +11,23 @@ let pushCover = (el) => {
   let movHover = document.createElement("div");
   movHover.setAttribute("class", "vid_hover d-none");
   // :icons
+  let playlink = document.createElement("a");
+  playlink.setAttribute("href", "https://www.netflix.com/it/");
+  playlink.setAttribute("target", "_blank");
+  playlink.style = "color: red";
   let playHover = document.createElement("i");
   playHover.setAttribute("class", "bi bi-play-circle-fill");
   let infoHover = document.createElement("i");
   infoHover.setAttribute("class", "bi bi-info-circle-fill");
-  movHover.appendChild(playHover);
+  playlink.appendChild(playHover);
+  movHover.appendChild(playlink);
   movHover.appendChild(infoHover);
   // :p
   let pHover = document.createElement("p");
   pHover.innerText = "Short text plot or episode preview ";
   movHover.appendChild(pHover);
   // IMG
+
   let cov = document.createElement("img");
   cov.setAttribute("class", "w-100");
   cov.setAttribute("src", `https://placekitten.com/${900 + n_cover}`);

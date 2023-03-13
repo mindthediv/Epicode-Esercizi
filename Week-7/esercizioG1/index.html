@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio G1</title>
+    <style>
+      form > * {
+        width: fit-content;
+      }
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body style="text-align: center; line-height: 2em">
+    <header>
+      <h1>Add Pet</h1>
+    </header>
+    <main>
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 60%;
+          margin: 0 auto;
+          align-items: center;
+        "
+      >
+        <label for="name">Add Name</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="name">Add Owner Name</label>
+        <input type="text" name="owner name" id="owner" />
+
+        <label for="name">Add Species</label>
+        <select name="species" id="species">
+          <option value="Cane">Cane</option>
+          <option value="Gatto">Gatto</option>
+          <option value="Coniglio">Coniglio</option>
+        </select>
+
+        <label for="name">Add Species</label>
+        <select name="breed" id="breed" style="margin-bottom: 2em">
+          <option value="Labrador">Labrador</option>
+          <option value="Soriano">Soriano</option>
+          <option value="Nano">Nano</option>
+        </select>
+        <div>
+          <button type="button" onclick="addPet(); ">ADD</button>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+      <ul id="petList"></ul>
+    </main>
+    <script src="/index.js"></script>
+  </body>
+</html>
