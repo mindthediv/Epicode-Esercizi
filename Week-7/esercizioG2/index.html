@@ -10,13 +10,16 @@
         width: 70%;
         margin: 0 auto;
         text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+
         border-radius: 12px;
         font-family: sans-serif;
       }
       .timerBox {
         color: white;
-        padding-bottom: 1em;
+        padding: 1em 0;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 12px;
       }
       ul {
         list-style-type: none;
@@ -28,10 +31,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(
-          rgba(0, 0, 0, 0),
-          rgba(255, 255, 255, 0.5)
-        );
         border-radius: 12px;
       }
       form > *:not(label) {
@@ -41,6 +40,19 @@
       #delName,
       #reset {
         width: fit-content;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+        padding: 0.5em;
+        border-radius: 12px;
+        margin-right: 0.5em;
+      }
+      .timerBox,
+      form {
+        color: white;
+        box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(rgb(70, 70, 70), rgb(32, 32, 32));
       }
     </style>
   </head>
@@ -49,7 +61,7 @@
       <h3>Users List</h3>
       <ul id="localUl"></ul>
       <form id="nameForm">
-        <label for="name">Add Name</label>
+        <label for="name"><h3>Add Name</h3></label>
         <input
           type="text"
           name="Name"
@@ -57,12 +69,14 @@
           placeholder="Insert user name"
           required
         />
-        <input type="submit" id="saveName" value="SAVE USER" />
-        <input type="button" id="delName" value="DELETE LAST" />
-        <input type="reset" name="Reset" id="reset" value="RESET" />
+        <div class="btnBox">
+          <input type="submit" id="saveName" value="SAVE USER" />
+          <input type="button" id="delName" value="DELETE LAST" />
+          <input type="reset" name="Reset" id="reset" value="RESET" />
+        </div>
       </form>
+      <h3>Timer</h3>
       <div class="timerBox">
-        <h3>Timer</h3>
         <h4 id="timer">&nbsp;</h4>
       </div>
     </div>
