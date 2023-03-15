@@ -16,17 +16,22 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/sass/app.css" />
   </head>
 
   <body>
-    <header>
-      <h1 class="text-center">Pickabook</h1>
+    <header
+      class="text-bg-dark"
+      style="height: 78px; position: sticky; top: 0px; z-index: 2"
+    >
+      <h1 class="text-center" style="font-size: 64px">Pickabook</h1>
     </header>
     <main class="d-flex">
       <div class="container" style="width: 80%">
-        <div id="booksRow" class="row row-cols-3"></div>
+        <div id="booksRow" class="row row-cols-3 g-3"></div>
       </div>
-      <div style="width: 20%; text-align: center">
+
+      <div class="stickychart" style="width: 20%; text-align: center">
         <h2>Carrello</h2>
         <button id="chart-clear">SVUOTA CARRELLO</button>
         <div id="sideChart" class="d-flex flex-column align-items-center"></div>
