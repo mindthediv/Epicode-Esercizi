@@ -44,5 +44,5 @@ btnLoadImg.addEventListener("click", () => {
   getImgs("abstract");
 });
 btnLoad2.addEventListener("click", () => {
-  getImgs("music");
+  getImgs("monochrome");
 });
