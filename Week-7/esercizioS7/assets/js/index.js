@@ -22,6 +22,11 @@
 const prodRow = document.querySelector("#productsGrid .row");
 const prods_URL = "https://striveschool-api.herokuapp.com/api/product/";
 
+const hideSpinner = () => {
+  let spinnerEl = document.querySelector(".spinner-border");
+  spinnerEl.classList.add("d-none");
+};
+
 const getProducts = async function () {
   try {
     let response = await fetch(prods_URL, {
@@ -34,11 +39,10 @@ const getProducts = async function () {
     console.log(response);
     if (response.ok) {
       let products = await response.json();
+      hideSpinner();
       products.forEach((el) => {
         createCard(el.imageUrl, el.name, el._id);
       });
-
-      console.log(products);
     } else {
     }
   } catch (error) {

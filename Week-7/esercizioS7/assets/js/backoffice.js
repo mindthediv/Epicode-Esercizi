@@ -21,7 +21,6 @@
 
 const prods_URL = "https://striveschool-api.herokuapp.com/api/product/";
 let prodId = new URLSearchParams(window.location.search).get("prodId");
-console.log("prodId", prodId);
 
 let backDel = async () => {
   let response = await fetch(prods_URL + prodId, {

@@ -55,27 +55,28 @@
       <form>
         <div class="mb-3">
           <label for="prodName" class="form-label">Product Name</label>
-          <input type="text" class="form-control" id="prodName" />
+          <input required type="text" class="form-control" id="prodName" />
         </div>
         <div class="mb-3">
           <label for="prodDespt" class="form-label">Description</label>
-          <input type="textarea" class="form-control" id="prodDespt" />
+          <input required type="textarea" class="form-control" id="prodDespt" />
         </div>
         <div class="mb-3">
           <label for="prodBrand" class="form-label">Brand</label>
-          <input type="text" class="form-control" id="prodBrand" />
+          <input required type="text" class="form-control" id="prodBrand" />
         </div>
         <div class="mb-3">
           <label for="prodImg">Image URL</label>
-          <input type="text" class="form-control" id="prodImg" />
+          <input required type="text" class="form-control" id="prodImg" />
         </div>
         <div class="mb-3">
           <label for="prodPrice">Price</label>
-          <input type="number" class="form-control" id="prodPrice" />
+          <input required type="number" class="form-control" id="prodPrice" />
         </div>
         <button id="submit" type="submit" class="btn btn-primary">
           Add Product
         </button>
+        <button id="reset" type="reset" class="btn btn-warning">Reset</button>
         <button id="backDelete" type="button" class="btn btn-danger invisible">
           Delete Product
         </button>
