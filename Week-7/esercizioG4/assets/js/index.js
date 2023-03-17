@@ -19,21 +19,14 @@ const getImgs = async function (category) {
           "xUCVsn0uVXXtttTKtNLU83kSyPtmXkvllfGGIogt7YBpVFRzuijcf2mN",
       },
     });
-    const apiPic = await response.json();
+    const fetchData = await response.json();
+
     svgArray.forEach((el) => el.remove());
 
-    console.log(apiPic);
-
     cardArray.forEach((el) => {
-      let newImg = document.createElement("img");
-
-      let photoArray = apiPic.photos[i];
-      console.log(photoArray);
-      newImg.setAttribute("src", photoArray.src.medium);
-      i += 1;
-
-      let cardChild1 = el.querySelector(".card-body");
-      el.insertBefore(newImg, cardChild1);
+      el.innerHTML =
+        '<img src=""' +
+        '<div class="card-body"><h5 class="card-title">Lorem Ipsum</h5><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><div class="d-flex justify-content-between align-items-center"><div class="btn-group"><button type="button" class="btn btn-sm btn-outline-secondary">View</button><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></div><small class="text-muted">9 mins</small></div></div>';
     });
   } catch (error) {
     console.log(error);
@@ -42,7 +35,9 @@ const getImgs = async function (category) {
 
 btnLoadImg.addEventListener("click", () => {
   getImgs("abstract");
+  i = 0;
 });
 btnLoad2.addEventListener("click", () => {
   getImgs("monochrome");
+  i = 0;
 });
