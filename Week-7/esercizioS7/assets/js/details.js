@@ -13,7 +13,7 @@ let showDetail = async () => {
   let prodData = await response.json();
   let prodDetail = document.createElement("div");
   prodDetail.classList.add("col-12");
-  prodDetail.innerHTML = `<div class="card mb-3" style="max-width: 540px;"><div class="row g-0"><div class="col-md-4"><img src="${prodData.imageUrl}" class="img-fluid rounded-start" alt="..."></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">${prodData.name}</h5><p class="card-text">${prodData.description}</p><p class="card-text"><small class="text-muted">${prodData.price}$</small></p></div></div></div></div>`;
+  prodDetail.innerHTML = `<div class="card mb-3 border-0" style="width: 100%"><div class="row g-0"><div class="col-md-4"><img src="${prodData.imageUrl}" class="img-fluid rounded-start" alt="..."></div><div class="col-md-8"><div class="card-body"><h2 class="card-title">${prodData.name}</h2><p class="card-text">${prodData.description}</p><p class="card-text"><small class="text-muted">${prodData.brand}</small></p><p>Prezzo: ${prodData.price}$</p></div></div></div></div>`;
   detailRow.appendChild(prodDetail);
 };
 showDetail();

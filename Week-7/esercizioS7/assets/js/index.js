@@ -41,7 +41,7 @@ const getProducts = async function () {
       let products = await response.json();
       hideSpinner();
       products.forEach((el) => {
-        createCard(el.imageUrl, el.name, el._id);
+        createCard(el.imageUrl, el.name, el._id, el.price);
       });
     } else {
     }
@@ -51,9 +51,9 @@ const getProducts = async function () {
 };
 getProducts();
 
-let createCard = (prodImg, prodName, prodId) => {
+let createCard = (prodImg, prodName, prodId, prodPrice) => {
   let newCol = document.createElement("div");
-  newCol.classList.add("col-4");
-  newCol.innerHTML = `<div class="card" style="width: 18rem;"><img src="${prodImg}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${prodName}</h5><a href="./details.html?prodId=${prodId}" id="btnMore" class="btn btn-primary">More</a><a href="./backoffice.html?prodId=${prodId}" id="btnModify" class="btn btn-primary">Modify</a></div></div>`;
+  newCol.setAttribute("class", "col-12 col-md-4 col-xl-3");
+  newCol.innerHTML = `<div class="card border-0" style="width: 70%; height: 500px"><img src="${prodImg}" class="card-img-top" alt="..."><div class="card-body"><div class="mb-2"><h5 class="card-title">${prodName}</h5><span class="badge bg-primary rounded-pill" style="font-size: 26px">${prodPrice}$</span></div><a href="./details.html?prodId=${prodId}" id="btnMore" class="btn btn-success me-2 border border-dark border-2">More</a><a href="./backoffice.html?prodId=${prodId}" id="btnModify" class="btn  me-2 border border-dark border-2">Modify</a></div></div>`;
   prodRow.appendChild(newCol);
 };
