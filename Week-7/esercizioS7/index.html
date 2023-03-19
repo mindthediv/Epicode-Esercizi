@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
-    <title>Title</title>
+    <title>EP:CK</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -15,13 +15,24 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="./assets/sass/app.css" />
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <!-- HOME LOGO -->
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./assets/imgs/LOGO EPICK.png" style="width: 128px"
+          /></a>
+          <!-- BTN x mobile -->
           <button
             class="navbar-toggler"
             type="button"
@@ -33,29 +44,75 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- NAV CONTENT -->
+          <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+            <form id="searchForm">
+              <input id="search" type="search" placeholder="Cerca" />
+              <input type="submit" value="Q" />
+            </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./backoffice.html">Back-Office</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link d-none hideback" href="./backoffice.html">BackOffice</a>
+            </li>
+            <li class="nav-item dropdown dropstart">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person"></i>
+              </a>
+              <form id="login" class="dropdown-menu border-0" aria-labelledby="navbarDropdownMenuLink">
+                <input class='login-item' type="text" name="username" id="username" placeholder="Username">
+                <input class='login-item' type="password" name="password" id="password" placeholder="Password">
+                <input class='login-item btn btn-info ms-4' type="submit" name="submit" id="submit" value="Login">
+                <button class='d-none btn btn-info ms-4' type="button" name="logout" id="logout">Logout</button>
+              </form>
+            </li>
+            </div>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    <!-- MAIN -->
     <main>
-      <h1 class="text-center">PRODUCTS</h1>
+      <!-- AERO -->
+      <section id="aero">
+        <div class="container-fluid rounded">
+          <div class="row">
+            <div id="aeroPremium" class="col-12 col-xl-8 offset-xl-2">
+
+              <div class="textbg">
+              <h1 class="text-uppercase"><span>Il <span>piacere<br></span></span><div>di acquistare</div></h1>
+              <p>Esplora ogni giorno migliaia di prodotti, ovunque tu sia, anche dal tuo smartphone.<br> Passa anche tu al piano Premium: spedizioni gratuite ed offerte  esclusive ti aspettano! </p>
+              <a href="#" class="btn" id="premiumLink">Prova Premium</a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- PRODGRID -->
       <section id="productsGrid">
         <div class="container">
-          <div class="row g-4 p-3">
+          <!-- Trend row -->
+          <h2 class="text-bg-info rounded p-2">Di Tendenza</h2>
+          <div id="trendRow" class="row g-2 mb-2 ">
+            
+            <div
+              class="spinner-border text-primary d-block mx-auto mb-4"
+              role="status"
+            ></div>
+          </div>
+          <!-- last arrives row
+          <div id="arrivesRow" class="row g-2 ">
+            <h2 class="text-bg-info rounded p-2">Ultimi Arrivi</h2>
+            <div
+              class="spinner-border text-primary d-block mx-auto mb-4"
+              role="status"
+            ></div>
+          </div> -->
+          <!-- all products row -->
+          <h2 class="text-bg-info rounded p-2">Esplora</h2>
+          <div id="prodRow" class="row g-2 ">
             <div
               class="spinner-border text-primary d-block mx-auto mb-4"
               role="status"

@@ -111,8 +111,8 @@ const queryProd = async function (newProd) {
 };
 
 // AL SUBMIT DEL FORM IMPACCHETTA L'OGGETTO CHE SARA' PASSATO ALLA QUERY
-let formReference = document.getElementsByTagName("form")[0];
-formReference.addEventListener("submit", (e) => {
+
+backForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let newProd = {
     name: document.getElementById("prodName").value,
