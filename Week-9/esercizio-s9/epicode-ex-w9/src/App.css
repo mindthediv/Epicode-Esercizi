@@ -1,0 +1,108 @@
+:root {
+  --myDark: rgb(26, 26, 26);
+}
+
+html,
+body {
+  background-color: var(--myDark);
+}
+
+header {
+  background-color: var(--myDark);
+}
+header .netNav {
+  background-image: linear-gradient(rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+  color: white;
+}
+
+#basic-navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+#basic-nav-dropdown {
+  color: white;
+  padding: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.jumboTainer {
+  height: 40vh;
+  background-color: var(--myDark);
+  color: white;
+}
+
+.jumboCol {
+  padding: 0 5rem;
+}
+
+.jumboContent {
+  width: 100%;
+}
+.jumboContent .jumboText {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3em;
+  border-radius: 2em;
+  box-shadow: 2px 2px 16px 4px black;
+}
+.jumboContent img {
+  height: 38vh;
+  border-radius: 2em;
+  box-shadow: 2px 2px 16px 4px black;
+}
+
+.caroH2 {
+  background-color: var(--myDark);
+  color: white;
+  margin: 0;
+  padding: 0.6em 1em;
+}
+
+div.carousel-indicators {
+  display: none;
+}
+
+#carowTainer {
+  background-color: var(--myDark);
+}
+#carowTainer .carousel {
+  height: 20vh;
+  width: 100%;
+}
+#carowTainer .carousel .caroItem {
+  height: 20vh;
+  aspect-ratio: 16/9;
+}
+#carowTainer .carousel .caroItem img {
+  height: 100%;
+}
+
+.caroMovie {
+  height: 20vh;
+  padding: none;
+  position: relative;
+}
+.caroMovie:hover .hoverMovie {
+  display: block;
+}
+.caroMovie img {
+  position: absolute;
+  left: 0;
+  height: 20vh;
+  z-index: 1;
+}
+.caroMovie .hoverMovie {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), black);
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  display: none;
+  color: white;
+}
+.caroMovie .hoverMovie h3 {
+  font-size: 1em;
+}/*# sourceMappingURL=app.css.map */
