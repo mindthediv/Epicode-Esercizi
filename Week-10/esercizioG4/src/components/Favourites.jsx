@@ -21,7 +21,7 @@ const Favourites = () => {
                 <button
                   type="button"
                   onClick={() =>
-                    dispatch({ type: "REMOVE_FAVOURITES", payload: { i } })
+                    dispatch({ type: "REMOVE_FAVOURITES", payload: i })
                   }
                 >
                   ❌
