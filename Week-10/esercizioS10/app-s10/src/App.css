@@ -1,0 +1,11 @@
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+html,
+body,
+.app {
+  background-color: black !important;
+}
