@@ -1,16 +1,14 @@
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { addFavs } from "../redux/actions";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
 
   const addFavourites = (e) => {
     e.preventDefault();
-    dispatch({
-      type: "ADD_FAVOURITES",
-      payload: data.company_name,
-    });
+    dispatch(addFavs(data.company_name));
   };
   return (
     <Row
