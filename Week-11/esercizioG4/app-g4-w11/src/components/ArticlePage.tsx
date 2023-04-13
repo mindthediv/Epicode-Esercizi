@@ -34,7 +34,11 @@ const ArticlePage = () => {
           <h2>{articleData?.title}</h2>
           <p>{articleData?.summary}</p>
           <span>
-            <Badge bg="info">Published: </Badge> on
+            <Badge bg="info">
+              {" "}
+              Published: {articleData?.publishedAt.slice(0, 10)}
+            </Badge>
+            on
             <a href={articleData?.url} className="nav-link">
               {articleData?.newsSite}
             </a>
