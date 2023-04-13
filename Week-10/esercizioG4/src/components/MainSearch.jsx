@@ -5,8 +5,8 @@ import { jobsThunk, setQuery } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const MainSearch = () => {
-  const query = useSelector((state) => state.jobs.query);
-  const jobs = useSelector((state) => state.jobs.content);
+  const query = useSelector((state) => state.jobs.jobs.query);
+  const jobs = useSelector((state) => state.jobs.jobs.content);
   console.log(query);
 
   const dispatch = useDispatch();

@@ -27,7 +27,7 @@ export const jobsThunk = (query) => {
         console.log(data, getState);
         dispatch({
           type: GET_JOBS,
-          payload: data,
+          payload: data.data,
         });
       } else {
         alert("Error fetching results");

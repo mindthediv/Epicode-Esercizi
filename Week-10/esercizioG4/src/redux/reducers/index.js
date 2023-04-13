@@ -1,18 +1,21 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { ADD_FAVOURITES, GET_JOBS, SET_QUERY } from "../actions";
 
-const initialState = {
+const favsState = {
   //Slices
   favourites: {
     content: [],
   },
+};
+
+const jobsState = {
   jobs: {
     query: "",
     content: [],
   },
 };
 
-const favsReducer = (state = initialState, action) => {
+const favsReducer = (state = favsState, action) => {
   switch (action.type) {
     case ADD_FAVOURITES:
       if (!state.favourites.content.includes(action.payload)) {
@@ -38,7 +41,7 @@ const favsReducer = (state = initialState, action) => {
   }
 };
 
-const jobsReducer = (state = initialState, action) => {
+const jobsReducer = (state = jobsState, action) => {
   switch (action.type) {
     case SET_QUERY:
       return {
